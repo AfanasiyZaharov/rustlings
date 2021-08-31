@@ -6,7 +6,7 @@
 enum Message {
     Move(Point),
     Echo(String),
-    ChangeColor((u8,u8,u8)),
+    ChangeColor(u8,u8,u8),
     Quit, // TODO: implement the message variant types based on their usage below
 }
 
@@ -46,7 +46,7 @@ impl State {
             Message::Echo(some_str) => {
                 self.echo(some_str)
             }
-            Message::ChangeColor((r,g,b)) => { 
+            Message::ChangeColor(r,g,b) => { 
                 self.change_color((r,g,b))
             }
             Message::Quit => {
